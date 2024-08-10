@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sthuthi naivedyam</title>
+
+    <!-- Manifest for Progressive Web App support -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Telugu&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header class="site-header">
+            <div class="container">
+                <h1>sthuthi naivedyam</h1>
+                <h2>స్తుతి నైవేద్యం</h2>
+                <h3>This page is a non-profit spiritual initiative by the Pentecostal Movement Project.
+                </h3>
+                <p>&copy; sthuthi naivedyam. All rights reserved.</p>
+                <p id="viewCount">Page views: 0</p> <!-- times count -->
+
+                <div class="container">
+                    
+                    <ul class="social-links" aria-label="Social media links">
+                        <li>
+                            <a href="https://www.youtube.com/@pentecostalmovement" aria-label="pentecostalmovement Youtube" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/pentecostal_movement/" aria-label="pentecostalmovement Instagram " target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:naninunna48@gmail.com" aria-label="Developer Email">
+                                <i class="fas fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+    
+            </div>
+        </header>
+
+        <div class="main-wrapper">
+            <main class="main-content">
+                <!-- Navigation section for praises -->
+                <section class="praise-navigation" aria-labelledby="navigation-heading">
+                    <h2 id="navigation-heading" class="sr-only">Praise Navigation</h2>
+
+                    <!-- Navigation buttons and theme toggle -->
+                    <div class="nav-buttons">
+                        <button id="prevPraise" class="nav-button" aria-label="Previous praise" tabindex="0">
+                            <i class="fas fa-chevron-left" aria-hidden="true"></i> Previous
+                        </button>
+                        <button id="nextPraise" class="nav-button" aria-label="Next praise" tabindex="0">
+                            Next <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                        <button id="audioButton" class="nav-button" aria-label="Play audio" tabindex="0">
+                            <i class="fas fa-volume-up" aria-hidden="true"></i> Play Audio
+                        </button>
+
+                        <!-- Theme toggle button -->
+                        <button id="themeToggle" class="theme-switcher" aria-label="Toggle theme" tabindex="0">
+                            <span class="theme-label" aria-hidden="true">Light</span>
+                            <span class="slider" role="switch" aria-checked="false"></span>
+                            <span class="theme-label" aria-hidden="true">Dark</span>
+                        </button>
+
+                        <!-- Text size control buttons -->
+                        <div class="text-size-controls" role="group" aria-label="Text size controls">
+                            <button id="decreaseText" class="nav-button" aria-label="Decrease Font Size">
+                                <i class="fas fa-minus" aria-hidden="true"></i> Font
+                            </button>
+                            <button id="increaseText" class="nav-button" aria-label="Increase Font Size">
+                                <i class="fas fa-plus" aria-hidden="true"></i> Font
+                            </button>
+                        </div>
+
+                        <!-- Praise selection combo box -->
+                        <select id="praiseSelect" aria-label="Select a praise" class="praise-select" tabindex="0">
+                            <!-- Options will be added dynamically via JavaScript -->
+                        </select>
+                    </div>
+                </section>
+
+                <!-- Content section for displaying praises -->
+                <article id="praise-content" class="praise-content" aria-live="polite">
+                    <!-- Praise content will be dynamically added here -->
+                </article>
+            </main>
+        </div>
+
+        
+
+    <!-- Add the transliteration library for language support -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/transliteration/2.3.5/transliteration.min.js"></script>
+
+    <!-- Your main script file -->
+    <script src="script.js"></script>
+</body>
+</html>
