@@ -1249,7 +1249,7 @@ const updatePraise = () => {
     praiseSelect.value = currentIndex;
     praiseContent.innerHTML = praises[praiseKeys[currentIndex]];
     audioElement.src = `/audio/praise${currentIndex + 1}.mp3`;
-    document.getElementById('audioButton').textContent = 'Play Audio';
+    document.getElementById('audioButton').textContent = 'ఆడియో ప్లే';
     document.getElementById('audioButton').setAttribute('aria-label', 'Play audio');
 };
 
@@ -1264,11 +1264,11 @@ const toggleTheme = () => {
 const toggleAudio = () => {
     if (audioElement.paused) {
         audioElement.play();
-        document.getElementById('audioButton').textContent = 'Pause Audio';
+        document.getElementById('audioButton').textContent = 'పాజ్ ఆడియో';
         document.getElementById('audioButton').setAttribute('aria-label', 'Pause audio');
     } else {
         audioElement.pause();
-        document.getElementById('audioButton').textContent = 'Play Audio';
+        document.getElementById('audioButton').textContent = 'ఆడియో ప్లే';
         document.getElementById('audioButton').setAttribute('aria-label', 'Play audio');
     }
 };
@@ -1333,19 +1333,7 @@ const initPraise = () => {
     initAudio();
     initFontSize();
 };
-    // Get the current count from local storage, or initialize to 0 if not set
-    let viewCount = localStorage.getItem('viewCount');
-    viewCount = viewCount ? parseInt(viewCount) : 0;
-
-    // Increment the count
-    viewCount++;
-
-    // Save the new count back to local storage
-    localStorage.setItem('viewCount', viewCount);
-
-    // Update the page with the new count
-    document.getElementById('viewCount').textContent = `Page views: ${viewCount}`;
-
+    
 
 const registerServiceWorker = () => {
     if ('serviceWorker' in navigator) {
